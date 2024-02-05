@@ -1,0 +1,83 @@
+.card-container {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    top: calc(50% - 125px);
+    left: calc(50% - 200px);
+    border: 3px solid #ffffff;
+    padding: 10px 20px;
+    position: relative;
+    width: 400px;
+    background: radial-gradient(
+      ellipse at center,
+      #7abcff 0%,
+      #60abf8 44%,
+      #4096ee 100%
+    );
+  }
+  
+  .line {
+    clear: both;
+    width: 100%;
+    border-top: 3px solid #ffffff;
+  }
+  
+  .description {
+    font-size: xx-large;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  .location {
+    padding: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: medium;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  
+  .lower-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .temperatures {
+    width: 50%;
+    float: left;
+    padding: 10px;
+    margin: 5px 0;
+  }
+  
+  .temperature {
+    font-size: 40px;
+    text-align: center;
+    font-weight: lighter;
+  }
+  
+  .feels-like {
+    font-size: large;
+  }
+  
+  .humidity {
+    width: 100%;
+    font-size: large;
+  }
+  
+  .image {
+    width: 50%;
+  }
+  
+  .buttons-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .date-time {
+    color: black;
+    margin: 10px 0;
+  }
