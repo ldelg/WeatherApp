@@ -1,7 +1,27 @@
 .buttons-group {
-  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: #8080802e;
+  box-sizing: border-box;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.09);
+  height: fit-content;
 }
 
 .selected-button {
-    border: 2px solid blue;
-  }
+  border-width: 0 4px 4px 0;
+  transition-duration: 0.3s;
+  font-weight: 600;
+}
+
+.general-button {
+  background-color: #8181c8;
+  color: white;
+  border-radius: 5px;
+  margin: 5px;
+  height: 30px;
+  border-color: #8181c894;
+  border-top-width: 0;
+  border-left-width: 0;
+  white-space: nowrap;
+}

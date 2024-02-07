@@ -9,34 +9,46 @@ import DaysFilters from "../DaysFilters/DaysFilters";
 const WeatherPage = () => {
   const {
     weatherData,
-    temperatureUnit,
+    filtersState,
     updateTemperatureUnit,
     getTemperatureSymbol,
-    cities,
     updateCities,
-    daysButtons,
+    handleDeleteCity,
+    addCity,
   } = useWeatherContext();
+
+  const { temperatureUnit, cities, daysButtons } = filtersState;
   const { name, country, list } = weatherData;
 
   const [idx, setIdx] = useState(0);
 
   return (
     <>
-      <h2>Weather Information</h2>
-      <div className="buttons-layout">
-        <UnitFilters
-          temperatureUnit={temperatureUnit}
-          updateTemperatureUnit={updateTemperatureUnit}
+      <div className="container">
+        <div className="buttons-layout">
+          <div className="first-layout-row">
+            <Citybuttons
+              cities={cities}
+              updateCities={updateCities}
+              handleDeleteCity={handleDeleteCity}
+              addCity={addCity}
+            />
+            <UnitFilters
+              temperatureUnit={temperatureUnit}
+              updateTemperatureUnit={updateTemperatureUnit}
+            />
+          </div>
+          {daysButtons.length > 0 ? (
+            <DaysFilters daysButtons={daysButtons} setIdx={setIdx} />
+          ) : ("")}
+        </div>
+        <WeatherCard
+          getTemperatureSymbol={getTemperatureSymbol}
+          name={name}
+          country={country}
+          item={list[idx]}
         />
-        <Citybuttons cities={cities} updateCities={updateCities} />
-        <DaysFilters daysButtons={daysButtons} setIdx={setIdx} />
       </div>
-      <WeatherCard
-        getTemperatureSymbol={getTemperatureSymbol}
-        name={name}
-        country={country}
-        item={list[idx]}
-      />
     </>
   );
 };

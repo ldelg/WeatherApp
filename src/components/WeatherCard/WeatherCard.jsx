@@ -14,12 +14,12 @@ const WeatherCard = ({ getTemperatureSymbol, name, country, item }) => {
   } = item;
 
   return (
-    <>
-      <h3 className="date-time">{dt_txt}</h3>
-      <div className="card-container">
+    <div className="card-container">
+      {description ? (
+        <>
           <div className="description">{description}</div>
           <div className="location">
-            {name}, {country}
+            {name}, {country} - {dt_txt}
           </div>
           <div className="line"></div>
           <div className="lower-container">
@@ -40,8 +40,11 @@ const WeatherCard = ({ getTemperatureSymbol, name, country, item }) => {
             </div>
           </div>
           <div className="humidity">Humidity: {humidity}%</div>
-      </div>
-    </>
+        </>
+      ) : (
+        <p>Data couldn't get fetched</p>
+      )}
+    </div>
   );
 };
 

@@ -1,3 +1,29 @@
-* {
-  text-align: center;
+body {
+  background: linear-gradient(66deg, #e6fbfe 0%, #edddfb 100%);
+}
+
+.container {
+  display: flex;
+  padding: 20px 40px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons-layout {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.06);
+}
+
+.first-layout-row {
+  display: unset;
+  @media screen and (min-width: 480px) {
+    display: flex;
+  }
 }

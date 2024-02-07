@@ -9,8 +9,7 @@ const UnitFilters = ({ temperatureUnit, updateTemperatureUnit }) => {
           <button
             key={unit.name}
             onClick={() => updateTemperatureUnit(unit.name)}
-            className={unit.selected ? "selected-button" : ""}
-          >
+            className={`general-button ${unit.selected ? "selected-button" : ""}`}>
             {unit.name} - {unit.symbol}
           </button>
         ))}

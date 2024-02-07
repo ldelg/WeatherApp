@@ -1,0 +1,56 @@
+.search-bar-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.city-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.delete-icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(248, 29, 29, 0.588);
+  margin: 7px 7px 0 0;
+  border-radius: 50%;
+  text-align: center;
+  font-size: large;
+  line-height: 16px;
+}
+
+.button-icon-wrapper:hover .delete-icon {
+  display: block;
+}
+
+.search-field {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: block;
+  margin: 0 5px;
+  max-width: 50%;
+  outline: none;
+  padding: 0.7em 1em;
+  width: 100%;
+  height: 30px;
+}
+
+.add-button {
+  height: 28px;
+  background-color: grey;
+}

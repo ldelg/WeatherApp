@@ -1,3 +1,29 @@
 .days-filters-container {
-   
+  margin-top: 10px;
+  column-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day-filter {
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+  height: auto;
+  padding: 6px;
+  cursor: pointer;
+  border-bottom: 2px solid #4d4d86;
+  border: 0 2px 2px 0;
+  border-right: 2px solid #4d4d86;
+  cursor: pointer;
+}
+
+.label {
+  margin-bottom: 5px;
+}
+
+.options-bar {
+  background-color: #8181c8;
+  border: none;
+  color: white;
 }
